@@ -15,6 +15,8 @@ public class Main {
         album.addSong("Infectious",4.17);
         album.addSong("Lost",3.06);
         album.addSong("Sunburst",3.11);
+        
+         // Added Album in a Arraylist
         albums.add(album);
         album = new Album("NCS2","JPB");
         album.addSong("High",3.13);
@@ -22,6 +24,8 @@ public class Main {
         album.addSong("Top Floor",3.36);
         album.addSong("All Stops Now",2.26);
         album.addSong("Get Over You",3.29);
+         
+        // Added Album in a Arraylist
         albums.add(album);
 
         LinkedList<Songs> Playlist1 = new LinkedList<>();
@@ -58,11 +62,13 @@ public class Main {
             printMenu();
         }
         while(!quit){
+            System.out.print("\nEnter Choice : ");
             int action = sc.nextInt();
             sc.nextLine();
             switch(action){
                 case 0:
                     System.out.println("Playlist complete");
+                    System.out.println("||********Thanks for Visit my Music App***********||");
                     quit=true;
                     break;
 
@@ -142,22 +148,22 @@ public class Main {
     }
 
     private static void printMenu(){
-        System.out.println("Available Options \n Press");
-        System.out.println("0 - Quit\n"
-                +"1 - Next\n"
-                +"2 - Previous\n"
-                +"3 - Repeat\n"
+        System.out.println("Available Options ");
+        System.out.println("0 - Quit from Music Player\n"
+                +"1 - Next Song\n"
+                +"2 - Previous Song\n"
+                +"3 - Repeat Song\n"
                 +"4 - List all songs\n"
                 +"5 - Print all available options\n"
-                +"6 - Remove current song from playlist");
+                +"6 - Remove current Song from Playlist");
     }
     private static void printList(LinkedList<Songs> Playlist){
         Iterator<Songs> iterator = Playlist.iterator();
-        System.out.println("----------------------------------------------------------------------");
+        System.out.println("<---------------------------------------------------------------------->");
 
         while(iterator.hasNext()){
             System.out.println(iterator.next());
         }
-        System.out.println("----------------------------------------------------------------------");
+        System.out.println("<---------------------------------------------------------------------->");
     }
 }
